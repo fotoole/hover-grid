@@ -17,6 +17,7 @@
   display: block;
   width: 100%;
   height: auto;
+  margin-top: 0px;
 }
 
 .overlay {
@@ -88,5 +89,9 @@
 
 #top-panel {
   height:500px;
+  background-color:$maroon;
+}
+
+#hover-grid-container {
   background-color:$maroon;
 }
