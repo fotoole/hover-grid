@@ -1113,11 +1113,11 @@ Quiz.prototype.render = function(container) {
     var message;
     if (percentage === 1) {
       message = 'You are 100% Jesuit! Explore your Jesuit prowess by reading the Spiritual Exercises of Ignatius of Loyola for insight into his faith journey, join a retreat, or research a “Retreat in Daily Life” program.';
-    } else if (percentage >= .8) {
+    } else if (percentage >= 0.8) {
       message = 'You are 80% Jesuit. You are part of the Jesuit family! Reward yourself by embarking on traditions like Taize prayer. At Loyola’s Lake Shore Campus, Taize prayer is offered every Wednesday at 9:30 p.m. in Madonna della Strada. If you’re not near campus, find a daily dose of Ignatian spirituality at ignatianspirituality.com.';
-    } else if (percentage >= .6) {
+    } else if (percentage >= 0.6) {
       message = 'You are 60% Jesuit. Try attending some of Loyola’s November events listed above. If you’re not near Chicago though, check out your nearby Jesuit university or parish—or visit Ignatian Solidarity Network at ignatiansolidarity.net.';
-    } else if (percentage >= .3) {
+    } else if (percentage >= 0.3) {
       message = 'You are 40% Jesuit. Pick up a copy of “The Jesuit Guide to (Almost) Everything” by James Martin, S.J. The book is a handy reference on how the life and teachings of St. Ignatius can impact your life.';
     } else {
       message = 'You are 20% Jesuit (or maybe less). To increase your Jesuitical know-how, check out our #FollowFriday recommendations. The list is filled with inspiring Jesuits and impactful organizations sharing Ignatian spirituality on social media.';
@@ -1139,7 +1139,7 @@ Quiz.prototype.render = function(container) {
     }
     $('#submit-button').prop('disabled', !all_questions_answered);
   });
-}
+};
 
 // An object for a Question, which contains the question, the correct choice, and wrong choices. This block is the constructor.
 var Question = function(question_string, correct_choice, wrong_choices) {
@@ -1165,7 +1165,7 @@ var Question = function(question_string, correct_choice, wrong_choices) {
       wrong_choices.splice(wrong_choice_index, 1);
     }
   }
-}
+};
 
 // A function that you can enact on an instance of a question object. This function is called render() and takes in a variable called the container, which is the <div> that I will render the question in. This question will "return" with the score when the question has been answered.
 Question.prototype.render = function(container) {
@@ -1216,7 +1216,7 @@ Question.prototype.render = function(container) {
     // Trigger a user-select-change
     container.trigger('user-select-change');
   });
-}
+};
 
 // "Main method" which will create all the objects and render the Quiz.
 $(document).ready(function() {
@@ -1239,7 +1239,7 @@ $(document).ready(function() {
 
 $(window).load(function() {
  $("#loader-wrapper").fadeOut(500);
-})
+});
 
 window.onscroll = function() {myFunction();};
 
